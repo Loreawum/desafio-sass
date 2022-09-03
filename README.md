@@ -22,3 +22,6 @@ componente Card y cambiar su estética.
 7. Copié un html Card de la página de bootstrap e hice link al input.css
 8. Importé bootsatrap.scss, functions.scss, variables.scss a mi input.scss
 9. Finalmente comencé a sobre escribir en mi input.scss las modificaciones default
+
+### ¡Importante!
+Este repositorio cuenta con un Gitignore-node para los módulos de npm, ya que no cuentan como parte de mi código. Para efectos del código, crear una carpeta en la raíz llamada “sass-modules”, ya en ella, instalar mediante npm i sass  y npm i bootstrap.
