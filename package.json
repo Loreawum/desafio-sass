@@ -1,0 +1,11 @@
+
+{
+  "scripts": {
+    "sass": "sass -w assets/scss/input.scss:assets/css/input.css"
+  },
+  
+  "dependencies": {
+    "bootstrap": "^5.2.0",
+    "sass": "^1.54.8"
+  }
+}

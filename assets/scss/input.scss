@@ -1,0 +1,47 @@
+// Personalizado scss
+// anulación de variable predeterminada aquí
+@import "../../sass-modules/node_modules/bootstrap/scss/functions";
+@import "../../sass-modules/node_modules/bootstrap/scss/variables";
+
+// mapa personal. creación de color propio
+$custom-colors: (
+  "rojazo": rgb(117, 1, 1),
+);
+
+// fusión de mapas
+$theme-colors: map-merge($theme-colors, $custom-colors);
+$btn-padding-y: 0.6rem;
+$btn-padding-x: 1.5rem;
+$font-family-sans-serif: "Barlow Condensed", sans-serif;
+body {
+  height: 100vh;
+  &main {
+    height: 400px;
+  }
+  .card {
+    //uso de @extend para reutilizar las siguientes clases
+    @extend .bg-dark;
+    @extend .text-light;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    .card-title {
+      font-family: "Fugaz One", cursive;
+      text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+      font-weight: lighter;
+      display: flex;
+      justify-content: center;
+    }
+    .btn {
+      //uso de @extend para reutilizar las variables de la clase .card-title en el boton del card
+      @extend .card-title;
+    }
+  }
+}
+
+//Aquí el @import de la librería Bootstrap
+@import "../../sass-modules/node_modules/bootstrap/scss/bootstrap";
+
+//Importación del las nuevas fuentes
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
